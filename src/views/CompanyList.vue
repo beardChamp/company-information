@@ -3,7 +3,9 @@
     <h1>All Companies</h1>
     <ul>
       <li v-for="company in companies" :key="company.id">
-        {{company.name}}
+        <div class="company-id">{{company.id}}</div>
+        <div class="company-name"><router-link :to="{name:'companyView', params: {id: company.id}}">{{company.name}}</router-link></div>
+        <div class="company-edit"><router-link :to="{name:'companyEdit', params: {id: company.id}}" tag="button">Edit</router-link></div>
       </li>
     </ul>
   </div>
