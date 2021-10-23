@@ -15,12 +15,12 @@ export default new Router({
       component: CompanyList,
     },
     { 
-      path: '/company/view/:id',
+      path: '/company/view/:company_id',
       name: 'companyView',
       component: CompanyView
     },
     { 
-      path: '/company/edit/:id',
+      path: '/company/edit/:company_id',
       name: 'companyEdit',
       component: CompanyEdit
     },
