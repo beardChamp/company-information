@@ -1,28 +1,29 @@
 <template>
   <div id="app">
+    <nav class="navbar" aria-label="navigation">
+      <div class="navbar-brand">
+        Company Information
+      </div>
+      <div class="navbar-menu">
+        <!-- navbar start, navbar end -->
+      </div>
+    </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+@import '~bulma'; // This applies Bulma CSS to my whole frontend
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #222;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+a {
+  font-weight: bold;
+  color: #009;
 }
 </style>

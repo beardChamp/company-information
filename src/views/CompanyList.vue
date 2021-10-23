@@ -2,10 +2,14 @@
   <div class="company-list">
     <h1>All Companies</h1>
     <ul>
-      <li v-for="company in companies" :key="company.id">
-        <div class="company-id">{{company.id}}</div>
-        <div class="company-name"><router-link :to="{name:'companyView', params: {id: company.id}}">{{company.name}}</router-link></div>
-        <div class="company-edit"><router-link :to="{name:'companyEdit', params: {id: company.id}}" tag="button">Edit</router-link></div>
+      <li v-for="company in companies" :key="company.id" class="columns">
+        <div class="company-id column is-one-third">{{company.id}}</div>
+        <div class="company-name column is-one-third">
+          <router-link :to="{name:'companyView', params: {company_id: company.id}}">{{company.name}}</router-link>
+        </div>
+        <div class="company-edit column is-one-third">
+          <router-link :to="{name:'companyEdit', params: {company_id: company.id}}" tag="button">Edit</router-link>
+        </div>
       </li>
     </ul>
   </div>
